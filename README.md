@@ -62,6 +62,10 @@ The documentation provides a [comparison of available models](https://pytorch-fo
 
 - [Temporal Fusion Transformers for Interpretable Multi-horizon Time Series Forecasting](https://arxiv.org/pdf/1912.09363.pdf)
   which outperforms DeepAR by Amazon by 36-69% in benchmarks
+- [Temporal Fusion Transformer (No Static)]  
+  a streamlined TFT variant that omits all static covariates, relying solely on time-varying inputs and variable-selection networks; matches or even improves the original TFT’s forecasting accuracy when static features are unavailable.
+- [Temporal Fusion Transformer (TCN + No Static)]  
+  builds on the No-Static variant by replacing the internal LSTM layers with a Temporal Convolutional Network (TCN) using dilated causal convolutions to capture longer-range dependencies—delivering improved multi-horizon forecasts on datasets without static covariates.
 - [N-BEATS: Neural basis expansion analysis for interpretable time series forecasting](http://arxiv.org/abs/1905.10437)
   which has (if used as ensemble) outperformed all other methods including ensembles of traditional statical
   methods in the M4 competition. The M4 competition is arguably the most important benchmark for univariate time series forecasting.

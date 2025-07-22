@@ -46,6 +46,8 @@ from pytorch_forecasting.models import (
     NHiTS,
     RecurrentNetwork,
     TemporalFusionTransformer,
+    TemporalFusionTransformerNoStatic,
+    TemporalFusionTransformerTCNNoStatic,
     TiDEModel,
     get_rnn,
 )
@@ -71,6 +73,8 @@ __all__ = [
     "NaNLabelEncoder",
     "MultiNormalizer",
     "TemporalFusionTransformer",
+    "TemporalFusionTransformerNoStatic",
+     "TemporalFusionTransformerTCNNoStatic",
     "TiDEModel",
     "NBeats",
     "NHiTS",
