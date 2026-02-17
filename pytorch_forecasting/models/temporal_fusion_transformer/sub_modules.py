@@ -360,7 +360,8 @@ class VariableSelectionNetwork(nn.Module):
     def num_inputs(self):
         return len(self.input_sizes)
 
-    def forward(self, x: dict[str, torch.Tensor], context: torch.Tensor = None):
+    def forward(self, x: dict[str, torch.Tensor], context: torch.Tensor = None, return_per_variable: bool = False):
+
         if self.num_inputs > 1:
             # transform single variables
             var_outputs = []
@@ -380,35 +381,32 @@ class VariableSelectionNetwork(nn.Module):
             sparse_weights = self.softmax(sparse_weights).unsqueeze(-2)
 
             outputs = var_outputs * sparse_weights
-            outputs = outputs.sum(dim=-1)
+            if return_per_variable:
+    # Return dictionary of [B, T, D] for each variable
+                outputs_dict = {
+        name: outputs[..., idx] for idx, name in enumerate(self.input_sizes.keys())
+    }
+                return outputs_dict, sparse_weights
+            else:
+                outputs = outputs.sum(dim=-1)
+                return outputs, sparse_weights
         elif self.num_inputs == 1:
-            # for one input, do not perform variable selection but just encoding
             name = next(iter(self.single_variable_grns.keys()))
             variable_embedding = x[name]
             if name in self.prescalers:
                 variable_embedding = self.prescalers[name](variable_embedding)
-            outputs = self.single_variable_grns[name](
-                variable_embedding
-            )  # fast forward if only one variable
-            if outputs.ndim == 3:  # -> batch size, time, hidden size, n_variables
-                sparse_weights = torch.ones(
-                    outputs.size(0), outputs.size(1), 1, 1, device=outputs.device
-                )  #
-            else:  # ndim == 2 -> batch size, hidden size, n_variables
-                sparse_weights = torch.ones(
-                    outputs.size(0), 1, 1, device=outputs.device
-                )
-        else:  # for no input
+            outputs = self.single_variable_grns[name](variable_embedding)
+
+            if return_per_variable:
+                return {name: outputs}, torch.ones(outputs.size(0), outputs.size(1), 1, 1, device=outputs.device)
+            else:
+                return outputs, torch.ones(outputs.size(0), outputs.size(1), 1, 1, device=outputs.device)
+
+        else:  # num_inputs == 0
             outputs = torch.zeros(context.size(), device=context.device)
-            if outputs.ndim == 3:  # -> batch size, time, hidden size, n_variables
-                sparse_weights = torch.zeros(
-                    outputs.size(0), outputs.size(1), 1, 0, device=outputs.device
-                )
-            else:  # ndim == 2 -> batch size, hidden size, n_variables
-                sparse_weights = torch.zeros(
-                    outputs.size(0), 1, 0, device=outputs.device
-                )
-        return outputs, sparse_weights
+            sparse_weights = torch.zeros(outputs.size(0), outputs.size(1), 1, 0, device=outputs.device) \
+                if outputs.ndim == 3 else torch.zeros(outputs.size(0), 1, 0, device=outputs.device)
+            return {}, sparse_weights if return_per_variable else (outputs, sparse_weights)
 
 
 class PositionalEncoder(torch.nn.Module):

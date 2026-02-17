@@ -1,0 +1,847 @@
+
+========================================================================================================================
+RUN=1 | HORIZON=25 | ts=2026-01-20 09:58:17
+========================================================================================================================
+Training | run=1 horizon=25
+Checkpoint dir: ckpts_original_multirun_metrics_lon/run_1/horizon_25
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'loss' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['loss'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'val_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+
+========================================================================================================================
+RUN=1 | HORIZON=25 | ts=2026-01-20 10:43:24
+========================================================================================================================
+Training | run=1 horizon=25
+Checkpoint dir: ckpts_original_multirun_metrics_lon/run_1/horizon_25
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'loss' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['loss'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'val_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+[run=1 H=25] Epoch=00 time(train+val)=184.138s
+[run=1 H=25] Epoch=00 train_loss=0.000451 val_loss=0.000622
+[run=1 H=25] Epoch=01 time(train+val)=182.768s
+[run=1 H=25] Epoch=01 train_loss=0.000357 val_loss=0.000609
+[run=1 H=25] Epoch=02 time(train+val)=182.219s
+[run=1 H=25] Epoch=02 train_loss=0.000342 val_loss=0.000615
+[run=1 H=25] Epoch=03 time(train+val)=181.660s
+[run=1 H=25] Epoch=03 train_loss=0.000329 val_loss=0.000563
+
+========================================================================================================================
+RUN=1 | HORIZON=25 | ts=2026-01-20 11:10:47
+========================================================================================================================
+Training | run=1 horizon=25
+Checkpoint dir: ckpts_original_multirun_metrics_lon/run_1/horizon_25
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'loss' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['loss'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/callbacks/model_checkpoint.py:658: Checkpoint directory /home/unt.ad.unt.edu/srr0248/Desktop/pytorch_for/pytorch-forecasting/examples/ckpts_original_multirun_metrics_lon/run_1/horizon_25 exists and is not empty.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'val_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+[run=1 H=25] Epoch=00 time(train+val)=181.523s
+[run=1 H=25] Epoch=00 train_loss=0.000467 val_loss=0.000623
+
+========================================================================================================================
+RUN=1 | HORIZON=25 | ts=2026-01-20 11:15:34
+========================================================================================================================
+Training | run=1 horizon=25
+Checkpoint dir: ckpts_original_multirun_metrics_lon/run_1/horizon_25
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'loss' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['loss'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/callbacks/model_checkpoint.py:658: Checkpoint directory /home/unt.ad.unt.edu/srr0248/Desktop/pytorch_for/pytorch-forecasting/examples/ckpts_original_multirun_metrics_lon/run_1/horizon_25 exists and is not empty.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'val_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+[run=1 H=25] Epoch=00 time(train+val)=184.951s
+[run=1 H=25] Epoch=00 train_loss=0.000455 val_loss=0.000644
+[run=1 H=25] Epoch=01 time(train+val)=180.617s
+[run=1 H=25] Epoch=01 train_loss=0.000361 val_loss=0.000626
+[run=1 H=25] Epoch=02 time(train+val)=185.519s
+[run=1 H=25] Epoch=02 train_loss=0.000343 val_loss=0.000618
+[run=1 H=25] Epoch=03 time(train+val)=184.738s
+[run=1 H=25] Epoch=03 train_loss=0.000329 val_loss=0.000600
+[run=1 H=25] Epoch=04 time(train+val)=184.241s
+[run=1 H=25] Epoch=04 train_loss=0.000312 val_loss=0.000580
+[run=1 H=25] Epoch=05 time(train+val)=185.914s
+[run=1 H=25] Epoch=05 train_loss=0.000296 val_loss=0.000586
+[run=1 H=25] Epoch=06 time(train+val)=183.473s
+[run=1 H=25] Epoch=06 train_loss=0.000283 val_loss=0.000607
+[run=1 H=25] Epoch=07 time(train+val)=188.139s
+[run=1 H=25] Epoch=07 train_loss=0.000268 val_loss=0.000609
+[run=1 H=25] Epoch=08 time(train+val)=187.205s
+[run=1 H=25] Epoch=08 train_loss=0.000252 val_loss=0.000635
+[run=1 H=25] Epoch=09 time(train+val)=185.153s
+[run=1 H=25] Epoch=09 train_loss=0.000237 val_loss=0.000615
+
+--- TRAINING TIME SUMMARY ---
+epochs_ran=10
+avg_epoch_time(train+val)=184.9949s
+best_epoch=4
+e2e_time_until_best=920.0657s
+total_fit_time_until_stop=1864.4329s
+best_ckpt=/home/unt.ad.unt.edu/srr0248/Desktop/pytorch_for/pytorch-forecasting/examples/ckpts_original_multirun_metrics_lon/run_1/horizon_25/best-epoch=04-val_loss=0.0006.ckpt
+
+Evaluating | run=1 horizon=25
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'loss' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['loss'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'logging_metrics' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['logging_metrics'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'test_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+trainer.test: [{'test_loss': 0.000782054674346, 'test_SMAPE': 0.0735144093632698, 'test_MAE': 0.0009774374775588512, 'test_RMSE': 0.0020936811342835426, 'test_MAPE': 0.07650668174028397}]
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'predict_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+
+--- INFERENCE + METRICS ---
+inference_time_total=26.3339s | per_batch=0.042406s
+MSE=0.000031, RMSE=0.005525, MAE=0.000977, MAPE=7.650790%, SMAPE=7.351447%
+
+END | run=1 horizon=25
+
+========================================================================================================================
+RUN=1 | HORIZON=30 | ts=2026-01-20 11:47:50
+========================================================================================================================
+Training | run=1 horizon=30
+Checkpoint dir: ckpts_original_multirun_metrics_lon/run_1/horizon_30
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'loss' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['loss'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'val_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+[run=1 H=30] Epoch=00 time(train+val)=185.292s
+[run=1 H=30] Epoch=00 train_loss=0.000492 val_loss=0.000698
+[run=1 H=30] Epoch=01 time(train+val)=185.351s
+[run=1 H=30] Epoch=01 train_loss=0.000382 val_loss=0.000642
+[run=1 H=30] Epoch=02 time(train+val)=188.324s
+[run=1 H=30] Epoch=02 train_loss=0.000345 val_loss=0.000623
+[run=1 H=30] Epoch=03 time(train+val)=186.346s
+[run=1 H=30] Epoch=03 train_loss=0.000324 val_loss=0.000639
+[run=1 H=30] Epoch=04 time(train+val)=185.593s
+[run=1 H=30] Epoch=04 train_loss=0.000304 val_loss=0.000602
+[run=1 H=30] Epoch=05 time(train+val)=185.367s
+[run=1 H=30] Epoch=05 train_loss=0.000285 val_loss=0.000640
+[run=1 H=30] Epoch=06 time(train+val)=187.344s
+[run=1 H=30] Epoch=06 train_loss=0.000266 val_loss=0.000648
+[run=1 H=30] Epoch=07 time(train+val)=183.639s
+[run=1 H=30] Epoch=07 train_loss=0.000247 val_loss=0.000646
+[run=1 H=30] Epoch=08 time(train+val)=184.629s
+[run=1 H=30] Epoch=08 train_loss=0.000234 val_loss=0.000672
+[run=1 H=30] Epoch=09 time(train+val)=188.508s
+[run=1 H=30] Epoch=09 train_loss=0.000224 val_loss=0.000687
+
+--- TRAINING TIME SUMMARY ---
+epochs_ran=10
+avg_epoch_time(train+val)=186.0390s
+best_epoch=4
+e2e_time_until_best=930.9048s
+total_fit_time_until_stop=1872.7238s
+best_ckpt=/home/unt.ad.unt.edu/srr0248/Desktop/pytorch_for/pytorch-forecasting/examples/ckpts_original_multirun_metrics_lon/run_1/horizon_30/best-epoch=04-val_loss=0.0006.ckpt
+
+Evaluating | run=1 horizon=30
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'loss' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['loss'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'logging_metrics' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['logging_metrics'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'test_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+trainer.test: [{'test_loss': 0.0008039516978897154, 'test_SMAPE': 0.0705987736582756, 'test_MAE': 0.001005837693810463, 'test_RMSE': 0.002160355681553483, 'test_MAPE': 0.06832315772771835}]
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'predict_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+
+--- INFERENCE + METRICS ---
+inference_time_total=27.3806s | per_batch=0.044091s
+MSE=0.000031, RMSE=0.005595, MAE=0.001006, MAPE=6.832360%, SMAPE=7.059875%
+
+END | run=1 horizon=30
+
+========================================================================================================================
+RUN=1 | HORIZON=35 | ts=2026-01-20 12:20:16
+========================================================================================================================
+Training | run=1 horizon=35
+Checkpoint dir: ckpts_original_multirun_metrics_lon/run_1/horizon_35
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'loss' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['loss'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'val_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+[run=1 H=35] Epoch=00 time(train+val)=190.777s
+[run=1 H=35] Epoch=00 train_loss=0.000451 val_loss=0.000625
+[run=1 H=35] Epoch=01 time(train+val)=186.864s
+[run=1 H=35] Epoch=01 train_loss=0.000357 val_loss=0.000626
+[run=1 H=35] Epoch=02 time(train+val)=185.071s
+[run=1 H=35] Epoch=02 train_loss=0.000339 val_loss=0.000623
+[run=1 H=35] Epoch=03 time(train+val)=188.306s
+[run=1 H=35] Epoch=03 train_loss=0.000325 val_loss=0.000653
+[run=1 H=35] Epoch=04 time(train+val)=189.515s
+[run=1 H=35] Epoch=04 train_loss=0.000307 val_loss=0.000645
+[run=1 H=35] Epoch=05 time(train+val)=191.288s
+[run=1 H=35] Epoch=05 train_loss=0.000289 val_loss=0.000615
+[run=1 H=35] Epoch=06 time(train+val)=190.488s
+[run=1 H=35] Epoch=06 train_loss=0.000269 val_loss=0.000640
+[run=1 H=35] Epoch=07 time(train+val)=186.200s
+[run=1 H=35] Epoch=07 train_loss=0.000248 val_loss=0.000652
+[run=1 H=35] Epoch=08 time(train+val)=187.327s
+[run=1 H=35] Epoch=08 train_loss=0.000232 val_loss=0.000653
+[run=1 H=35] Epoch=09 time(train+val)=185.937s
+[run=1 H=35] Epoch=09 train_loss=0.000220 val_loss=0.000665
+[run=1 H=35] Epoch=10 time(train+val)=186.422s
+[run=1 H=35] Epoch=10 train_loss=0.000207 val_loss=0.000672
+
+--- TRAINING TIME SUMMARY ---
+epochs_ran=11
+avg_epoch_time(train+val)=188.0177s
+best_epoch=5
+e2e_time_until_best=1131.8215s
+total_fit_time_until_stop=2081.9968s
+best_ckpt=/home/unt.ad.unt.edu/srr0248/Desktop/pytorch_for/pytorch-forecasting/examples/ckpts_original_multirun_metrics_lon/run_1/horizon_35/best-epoch=05-val_loss=0.0006.ckpt
+
+Evaluating | run=1 horizon=35
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'loss' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['loss'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'logging_metrics' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['logging_metrics'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'test_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+trainer.test: [{'test_loss': 0.0008429674198850989, 'test_SMAPE': 0.06973538547754288, 'test_MAE': 0.0010297656990587711, 'test_RMSE': 0.0022292740177363157, 'test_MAPE': 0.06654722988605499}]
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'predict_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+
+--- INFERENCE + METRICS ---
+inference_time_total=27.9399s | per_batch=0.044992s
+MSE=0.000033, RMSE=0.005730, MAE=0.001030, MAPE=6.654765%, SMAPE=6.973534%
+
+END | run=1 horizon=35
+
+========================================================================================================================
+RUN=1 | HORIZON=40 | ts=2026-01-20 12:56:11
+========================================================================================================================
+Training | run=1 horizon=40
+Checkpoint dir: ckpts_original_multirun_metrics_lon/run_1/horizon_40
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'loss' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['loss'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'val_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+[run=1 H=40] Epoch=00 time(train+val)=188.980s
+[run=1 H=40] Epoch=00 train_loss=0.000455 val_loss=0.000649
+[run=1 H=40] Epoch=01 time(train+val)=188.177s
+[run=1 H=40] Epoch=01 train_loss=0.000358 val_loss=0.000628
+[run=1 H=40] Epoch=02 time(train+val)=187.373s
+[run=1 H=40] Epoch=02 train_loss=0.000340 val_loss=0.000609
+[run=1 H=40] Epoch=03 time(train+val)=185.281s
+[run=1 H=40] Epoch=03 train_loss=0.000318 val_loss=0.000598
+[run=1 H=40] Epoch=04 time(train+val)=185.541s
+[run=1 H=40] Epoch=04 train_loss=0.000298 val_loss=0.000617
+[run=1 H=40] Epoch=05 time(train+val)=186.049s
+[run=1 H=40] Epoch=05 train_loss=0.000278 val_loss=0.000626
+[run=1 H=40] Epoch=06 time(train+val)=186.590s
+[run=1 H=40] Epoch=06 train_loss=0.000255 val_loss=0.000637
+[run=1 H=40] Epoch=07 time(train+val)=186.490s
+[run=1 H=40] Epoch=07 train_loss=0.000236 val_loss=0.000671
+[run=1 H=40] Epoch=08 time(train+val)=185.977s
+[run=1 H=40] Epoch=08 train_loss=0.000222 val_loss=0.000671
+
+--- TRAINING TIME SUMMARY ---
+epochs_ran=9
+avg_epoch_time(train+val)=186.7174s
+best_epoch=3
+e2e_time_until_best=749.8099s
+total_fit_time_until_stop=1690.9423s
+best_ckpt=/home/unt.ad.unt.edu/srr0248/Desktop/pytorch_for/pytorch-forecasting/examples/ckpts_original_multirun_metrics_lon/run_1/horizon_40/best-epoch=03-val_loss=0.0006.ckpt
+
+Evaluating | run=1 horizon=40
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'loss' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['loss'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'logging_metrics' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['logging_metrics'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'test_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+trainer.test: [{'test_loss': 0.0007998447399586439, 'test_SMAPE': 0.08411266654729843, 'test_MAE': 0.0009945917408913374, 'test_RMSE': 0.0021554320119321346, 'test_MAPE': 0.07430364191532135}]
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'predict_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+
+--- INFERENCE + METRICS ---
+inference_time_total=28.1801s | per_batch=0.045379s
+MSE=0.000031, RMSE=0.005582, MAE=0.000995, MAPE=7.430454%, SMAPE=8.411270%
+
+END | run=1 horizon=40
+
+========================================================================================================================
+RUN=2 | HORIZON=25 | ts=2026-01-20 13:25:37
+========================================================================================================================
+Training | run=2 horizon=25
+Checkpoint dir: ckpts_original_multirun_metrics_lon/run_2/horizon_25
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'loss' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['loss'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'val_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+[run=2 H=25] Epoch=00 time(train+val)=182.721s
+[run=2 H=25] Epoch=00 train_loss=0.000465 val_loss=0.000637
+[run=2 H=25] Epoch=01 time(train+val)=182.933s
+[run=2 H=25] Epoch=01 train_loss=0.000358 val_loss=0.000616
+[run=2 H=25] Epoch=02 time(train+val)=183.678s
+[run=2 H=25] Epoch=02 train_loss=0.000345 val_loss=0.000626
+[run=2 H=25] Epoch=03 time(train+val)=182.368s
+[run=2 H=25] Epoch=03 train_loss=0.000339 val_loss=0.000576
+[run=2 H=25] Epoch=04 time(train+val)=182.183s
+[run=2 H=25] Epoch=04 train_loss=0.000318 val_loss=0.000582
+[run=2 H=25] Epoch=05 time(train+val)=183.842s
+[run=2 H=25] Epoch=05 train_loss=0.000304 val_loss=0.000579
+[run=2 H=25] Epoch=06 time(train+val)=183.050s
+[run=2 H=25] Epoch=06 train_loss=0.000289 val_loss=0.000594
+[run=2 H=25] Epoch=07 time(train+val)=186.925s
+[run=2 H=25] Epoch=07 train_loss=0.000274 val_loss=0.000640
+[run=2 H=25] Epoch=08 time(train+val)=187.478s
+[run=2 H=25] Epoch=08 train_loss=0.000264 val_loss=0.000603
+
+--- TRAINING TIME SUMMARY ---
+epochs_ran=9
+avg_epoch_time(train+val)=183.9086s
+best_epoch=3
+e2e_time_until_best=731.7002s
+total_fit_time_until_stop=1665.8675s
+best_ckpt=/home/unt.ad.unt.edu/srr0248/Desktop/pytorch_for/pytorch-forecasting/examples/ckpts_original_multirun_metrics_lon/run_2/horizon_25/best-epoch=03-val_loss=0.0006.ckpt
+
+Evaluating | run=2 horizon=25
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'loss' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['loss'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'logging_metrics' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['logging_metrics'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'test_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+trainer.test: [{'test_loss': 0.0008176928968168795, 'test_SMAPE': 0.07893102616071701, 'test_MAE': 0.0010205066064372659, 'test_RMSE': 0.0021362772677093744, 'test_MAPE': 0.07066525518894196}]
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'predict_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+
+--- INFERENCE + METRICS ---
+inference_time_total=26.8973s | per_batch=0.043313s
+MSE=0.000033, RMSE=0.005780, MAE=0.001021, MAPE=7.066591%, SMAPE=7.893095%
+
+END | run=2 horizon=25
+
+========================================================================================================================
+RUN=2 | HORIZON=30 | ts=2026-01-20 13:54:35
+========================================================================================================================
+Training | run=2 horizon=30
+Checkpoint dir: ckpts_original_multirun_metrics_lon/run_2/horizon_30
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'loss' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['loss'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'val_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+[run=2 H=30] Epoch=00 time(train+val)=188.436s
+[run=2 H=30] Epoch=00 train_loss=0.000453 val_loss=0.000640
+[run=2 H=30] Epoch=01 time(train+val)=187.237s
+[run=2 H=30] Epoch=01 train_loss=0.000358 val_loss=0.000620
+[run=2 H=30] Epoch=02 time(train+val)=187.544s
+[run=2 H=30] Epoch=02 train_loss=0.000340 val_loss=0.000613
+[run=2 H=30] Epoch=03 time(train+val)=185.946s
+[run=2 H=30] Epoch=03 train_loss=0.000324 val_loss=0.000592
+[run=2 H=30] Epoch=04 time(train+val)=183.083s
+[run=2 H=30] Epoch=04 train_loss=0.000304 val_loss=0.000589
+[run=2 H=30] Epoch=05 time(train+val)=182.778s
+[run=2 H=30] Epoch=05 train_loss=0.000289 val_loss=0.000609
+[run=2 H=30] Epoch=06 time(train+val)=183.951s
+[run=2 H=30] Epoch=06 train_loss=0.000270 val_loss=0.000607
+[run=2 H=30] Epoch=07 time(train+val)=183.907s
+[run=2 H=30] Epoch=07 train_loss=0.000254 val_loss=0.000632
+[run=2 H=30] Epoch=08 time(train+val)=183.445s
+[run=2 H=30] Epoch=08 train_loss=0.000236 val_loss=0.000643
+[run=2 H=30] Epoch=09 time(train+val)=182.242s
+[run=2 H=30] Epoch=09 train_loss=0.000223 val_loss=0.000662
+
+--- TRAINING TIME SUMMARY ---
+epochs_ran=10
+avg_epoch_time(train+val)=184.8571s
+best_epoch=4
+e2e_time_until_best=932.2477s
+total_fit_time_until_stop=1860.9587s
+best_ckpt=/home/unt.ad.unt.edu/srr0248/Desktop/pytorch_for/pytorch-forecasting/examples/ckpts_original_multirun_metrics_lon/run_2/horizon_30/best-epoch=04-val_loss=0.0006.ckpt
+
+Evaluating | run=2 horizon=30
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'loss' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['loss'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'logging_metrics' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['logging_metrics'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'test_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+trainer.test: [{'test_loss': 0.0008047129376791418, 'test_SMAPE': 0.07270857691764832, 'test_MAE': 0.0009975292487069964, 'test_RMSE': 0.0021436710376292467, 'test_MAPE': 0.07365942746400833}]
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'predict_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+
+--- INFERENCE + METRICS ---
+inference_time_total=27.1524s | per_batch=0.043724s
+MSE=0.000031, RMSE=0.005588, MAE=0.000998, MAPE=7.366037%, SMAPE=7.270861%
+
+END | run=2 horizon=30
+
+========================================================================================================================
+RUN=2 | HORIZON=35 | ts=2026-01-20 14:26:49
+========================================================================================================================
+Training | run=2 horizon=35
+Checkpoint dir: ckpts_original_multirun_metrics_lon/run_2/horizon_35
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'loss' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['loss'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'val_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+[run=2 H=35] Epoch=00 time(train+val)=186.421s
+[run=2 H=35] Epoch=00 train_loss=0.000460 val_loss=0.000625
+[run=2 H=35] Epoch=01 time(train+val)=186.077s
+[run=2 H=35] Epoch=01 train_loss=0.000357 val_loss=0.000612
+[run=2 H=35] Epoch=02 time(train+val)=186.710s
+[run=2 H=35] Epoch=02 train_loss=0.000338 val_loss=0.000623
+[run=2 H=35] Epoch=03 time(train+val)=191.482s
+[run=2 H=35] Epoch=03 train_loss=0.000321 val_loss=0.000648
+[run=2 H=35] Epoch=04 time(train+val)=193.082s
+[run=2 H=35] Epoch=04 train_loss=0.000300 val_loss=0.000626
+[run=2 H=35] Epoch=05 time(train+val)=189.372s
+[run=2 H=35] Epoch=05 train_loss=0.000281 val_loss=0.000603
+[run=2 H=35] Epoch=06 time(train+val)=194.169s
+[run=2 H=35] Epoch=06 train_loss=0.000259 val_loss=0.000629
+[run=2 H=35] Epoch=07 time(train+val)=192.591s
+[run=2 H=35] Epoch=07 train_loss=0.000240 val_loss=0.000652
+[run=2 H=35] Epoch=08 time(train+val)=190.603s
+[run=2 H=35] Epoch=08 train_loss=0.000226 val_loss=0.000660
+[run=2 H=35] Epoch=09 time(train+val)=190.914s
+[run=2 H=35] Epoch=09 train_loss=0.000217 val_loss=0.000662
+[run=2 H=35] Epoch=10 time(train+val)=190.158s
+[run=2 H=35] Epoch=10 train_loss=0.000206 val_loss=0.000667
+
+--- TRAINING TIME SUMMARY ---
+epochs_ran=11
+avg_epoch_time(train+val)=190.1436s
+best_epoch=5
+e2e_time_until_best=1133.1444s
+total_fit_time_until_stop=2105.5753s
+best_ckpt=/home/unt.ad.unt.edu/srr0248/Desktop/pytorch_for/pytorch-forecasting/examples/ckpts_original_multirun_metrics_lon/run_2/horizon_35/best-epoch=05-val_loss=0.0006.ckpt
+
+Evaluating | run=2 horizon=35
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'loss' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['loss'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'logging_metrics' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['logging_metrics'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'test_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+trainer.test: [{'test_loss': 0.0008318167529068887, 'test_SMAPE': 0.08423309028148651, 'test_MAE': 0.0010243951110169291, 'test_RMSE': 0.0022234017960727215, 'test_MAPE': 0.07410687953233719}]
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'predict_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+
+--- INFERENCE + METRICS ---
+inference_time_total=28.6934s | per_batch=0.046205s
+MSE=0.000032, RMSE=0.005679, MAE=0.001024, MAPE=7.410775%, SMAPE=8.423304%
+
+END | run=2 horizon=35
+
+========================================================================================================================
+RUN=2 | HORIZON=40 | ts=2026-01-20 15:03:10
+========================================================================================================================
+Training | run=2 horizon=40
+Checkpoint dir: ckpts_original_multirun_metrics_lon/run_2/horizon_40
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'loss' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['loss'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'val_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+[run=2 H=40] Epoch=00 time(train+val)=189.417s
+[run=2 H=40] Epoch=00 train_loss=0.000449 val_loss=0.000620
+[run=2 H=40] Epoch=01 time(train+val)=191.149s
+[run=2 H=40] Epoch=01 train_loss=0.000357 val_loss=0.000612
+[run=2 H=40] Epoch=02 time(train+val)=191.046s
+[run=2 H=40] Epoch=02 train_loss=0.000339 val_loss=0.000626
+[run=2 H=40] Epoch=03 time(train+val)=193.532s
+[run=2 H=40] Epoch=03 train_loss=0.000318 val_loss=0.000628
+[run=2 H=40] Epoch=04 time(train+val)=195.264s
+[run=2 H=40] Epoch=04 train_loss=0.000295 val_loss=0.000648
+[run=2 H=40] Epoch=05 time(train+val)=190.190s
+[run=2 H=40] Epoch=05 train_loss=0.000270 val_loss=0.000635
+[run=2 H=40] Epoch=06 time(train+val)=192.376s
+[run=2 H=40] Epoch=06 train_loss=0.000247 val_loss=0.000646
+
+--- TRAINING TIME SUMMARY ---
+epochs_ran=7
+avg_epoch_time(train+val)=191.8536s
+best_epoch=1
+e2e_time_until_best=380.5663s
+total_fit_time_until_stop=1351.0605s
+best_ckpt=/home/unt.ad.unt.edu/srr0248/Desktop/pytorch_for/pytorch-forecasting/examples/ckpts_original_multirun_metrics_lon/run_2/horizon_40/best-epoch=01-val_loss=0.0006.ckpt
+
+Evaluating | run=2 horizon=40
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'loss' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['loss'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'logging_metrics' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['logging_metrics'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'test_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+trainer.test: [{'test_loss': 0.0008581634028814733, 'test_SMAPE': 0.07264208048582077, 'test_MAE': 0.0010454532457515597, 'test_RMSE': 0.002240638015791774, 'test_MAPE': 0.06786097586154938}]
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'predict_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+
+--- INFERENCE + METRICS ---
+inference_time_total=28.0714s | per_batch=0.045203s
+MSE=0.000034, RMSE=0.005869, MAE=0.001045, MAPE=6.786155%, SMAPE=7.264207%
+
+END | run=2 horizon=40
+
+========================================================================================================================
+RUN=3 | HORIZON=25 | ts=2026-01-20 15:26:56
+========================================================================================================================
+Training | run=3 horizon=25
+Checkpoint dir: ckpts_original_multirun_metrics_lon/run_3/horizon_25
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'loss' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['loss'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'val_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+[run=3 H=25] Epoch=00 time(train+val)=185.955s
+[run=3 H=25] Epoch=00 train_loss=0.000446 val_loss=0.000623
+[run=3 H=25] Epoch=01 time(train+val)=189.160s
+[run=3 H=25] Epoch=01 train_loss=0.000357 val_loss=0.000623
+[run=3 H=25] Epoch=02 time(train+val)=183.904s
+[run=3 H=25] Epoch=02 train_loss=0.000343 val_loss=0.000723
+[run=3 H=25] Epoch=03 time(train+val)=183.092s
+[run=3 H=25] Epoch=03 train_loss=0.000330 val_loss=0.000562
+[run=3 H=25] Epoch=04 time(train+val)=182.215s
+[run=3 H=25] Epoch=04 train_loss=0.000311 val_loss=0.000597
+[run=3 H=25] Epoch=05 time(train+val)=183.486s
+[run=3 H=25] Epoch=05 train_loss=0.000297 val_loss=0.000585
+[run=3 H=25] Epoch=06 time(train+val)=182.536s
+[run=3 H=25] Epoch=06 train_loss=0.000281 val_loss=0.000598
+[run=3 H=25] Epoch=07 time(train+val)=181.639s
+[run=3 H=25] Epoch=07 train_loss=0.000269 val_loss=0.000614
+[run=3 H=25] Epoch=08 time(train+val)=183.840s
+[run=3 H=25] Epoch=08 train_loss=0.000251 val_loss=0.000627
+
+--- TRAINING TIME SUMMARY ---
+epochs_ran=9
+avg_epoch_time(train+val)=183.9808s
+best_epoch=3
+e2e_time_until_best=742.1112s
+total_fit_time_until_stop=1666.4096s
+best_ckpt=/home/unt.ad.unt.edu/srr0248/Desktop/pytorch_for/pytorch-forecasting/examples/ckpts_original_multirun_metrics_lon/run_3/horizon_25/best-epoch=03-val_loss=0.0006.ckpt
+
+Evaluating | run=3 horizon=25
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'loss' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['loss'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'logging_metrics' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['logging_metrics'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'test_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+trainer.test: [{'test_loss': 0.0007589544402435422, 'test_SMAPE': 0.06619326770305634, 'test_MAE': 0.0009704885305836797, 'test_RMSE': 0.0020642282906919718, 'test_MAPE': 0.0632367804646492}]
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'predict_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+
+--- INFERENCE + METRICS ---
+inference_time_total=26.7514s | per_batch=0.043078s
+MSE=0.000031, RMSE=0.005533, MAE=0.000970, MAPE=6.323715%, SMAPE=6.619328%
+
+END | run=3 horizon=25
+
+========================================================================================================================
+RUN=3 | HORIZON=30 | ts=2026-01-20 15:55:55
+========================================================================================================================
+Training | run=3 horizon=30
+Checkpoint dir: ckpts_original_multirun_metrics_lon/run_3/horizon_30
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'loss' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['loss'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'val_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+[run=3 H=30] Epoch=00 time(train+val)=184.205s
+[run=3 H=30] Epoch=00 train_loss=0.000451 val_loss=0.000624
+[run=3 H=30] Epoch=01 time(train+val)=182.558s
+[run=3 H=30] Epoch=01 train_loss=0.000359 val_loss=0.000634
+[run=3 H=30] Epoch=02 time(train+val)=182.325s
+[run=3 H=30] Epoch=02 train_loss=0.000343 val_loss=0.000623
+[run=3 H=30] Epoch=03 time(train+val)=182.205s
+[run=3 H=30] Epoch=03 train_loss=0.000324 val_loss=0.000627
+[run=3 H=30] Epoch=04 time(train+val)=181.775s
+[run=3 H=30] Epoch=04 train_loss=0.000306 val_loss=0.000596
+[run=3 H=30] Epoch=05 time(train+val)=182.108s
+[run=3 H=30] Epoch=05 train_loss=0.000287 val_loss=0.000610
+[run=3 H=30] Epoch=06 time(train+val)=182.216s
+[run=3 H=30] Epoch=06 train_loss=0.000269 val_loss=0.000627
+[run=3 H=30] Epoch=07 time(train+val)=181.205s
+[run=3 H=30] Epoch=07 train_loss=0.000252 val_loss=0.000634
+[run=3 H=30] Epoch=08 time(train+val)=182.549s
+[run=3 H=30] Epoch=08 train_loss=0.000235 val_loss=0.000643
+[run=3 H=30] Epoch=09 time(train+val)=182.300s
+[run=3 H=30] Epoch=09 train_loss=0.000227 val_loss=0.000654
+
+--- TRAINING TIME SUMMARY ---
+epochs_ran=10
+avg_epoch_time(train+val)=182.3445s
+best_epoch=4
+e2e_time_until_best=913.0673s
+total_fit_time_until_stop=1835.7004s
+best_ckpt=/home/unt.ad.unt.edu/srr0248/Desktop/pytorch_for/pytorch-forecasting/examples/ckpts_original_multirun_metrics_lon/run_3/horizon_30/best-epoch=04-val_loss=0.0006.ckpt
+
+Evaluating | run=3 horizon=30
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'loss' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['loss'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'logging_metrics' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['logging_metrics'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'test_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+trainer.test: [{'test_loss': 0.0008026540162973106, 'test_SMAPE': 0.07289369404315948, 'test_MAE': 0.0010055805323645473, 'test_RMSE': 0.0021465544123202562, 'test_MAPE': 0.06769193708896637}]
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'predict_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+
+--- INFERENCE + METRICS ---
+inference_time_total=26.7437s | per_batch=0.043066s
+MSE=0.000032, RMSE=0.005657, MAE=0.001006, MAPE=6.769256%, SMAPE=7.289367%
+
+END | run=3 horizon=30
+
+========================================================================================================================
+RUN=3 | HORIZON=35 | ts=2026-01-20 16:27:42
+========================================================================================================================
+Training | run=3 horizon=35
+Checkpoint dir: ckpts_original_multirun_metrics_lon/run_3/horizon_35
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'loss' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['loss'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'val_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+[run=3 H=35] Epoch=00 time(train+val)=186.317s
+[run=3 H=35] Epoch=00 train_loss=0.000477 val_loss=0.000639
+[run=3 H=35] Epoch=01 time(train+val)=185.216s
+[run=3 H=35] Epoch=01 train_loss=0.000359 val_loss=0.000619
+[run=3 H=35] Epoch=02 time(train+val)=184.707s
+[run=3 H=35] Epoch=02 train_loss=0.000341 val_loss=0.000628
+[run=3 H=35] Epoch=03 time(train+val)=184.033s
+[run=3 H=35] Epoch=03 train_loss=0.000319 val_loss=0.000641
+[run=3 H=35] Epoch=04 time(train+val)=183.953s
+[run=3 H=35] Epoch=04 train_loss=0.000297 val_loss=0.000640
+[run=3 H=35] Epoch=05 time(train+val)=184.141s
+[run=3 H=35] Epoch=05 train_loss=0.000273 val_loss=0.000662
+[run=3 H=35] Epoch=06 time(train+val)=183.105s
+[run=3 H=35] Epoch=06 train_loss=0.000251 val_loss=0.000663
+
+--- TRAINING TIME SUMMARY ---
+epochs_ran=7
+avg_epoch_time(train+val)=184.4961s
+best_epoch=1
+e2e_time_until_best=371.5338s
+total_fit_time_until_stop=1300.6850s
+best_ckpt=/home/unt.ad.unt.edu/srr0248/Desktop/pytorch_for/pytorch-forecasting/examples/ckpts_original_multirun_metrics_lon/run_3/horizon_35/best-epoch=01-val_loss=0.0006.ckpt
+
+Evaluating | run=3 horizon=35
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'loss' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['loss'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'logging_metrics' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['logging_metrics'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'test_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+trainer.test: [{'test_loss': 0.0008691548136994243, 'test_SMAPE': 0.09778879582881927, 'test_MAE': 0.001071668928489089, 'test_RMSE': 0.0022272064816206694, 'test_MAPE': 0.08439686894416809}]
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'predict_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+
+--- INFERENCE + METRICS ---
+inference_time_total=27.1733s | per_batch=0.043757s
+MSE=0.000034, RMSE=0.005865, MAE=0.001072, MAPE=8.439787%, SMAPE=9.778879%
+
+END | run=3 horizon=35
+
+========================================================================================================================
+RUN=3 | HORIZON=40 | ts=2026-01-20 16:50:35
+========================================================================================================================
+Training | run=3 horizon=40
+Checkpoint dir: ckpts_original_multirun_metrics_lon/run_3/horizon_40
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'loss' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['loss'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'val_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+[run=3 H=40] Epoch=00 time(train+val)=185.630s
+[run=3 H=40] Epoch=00 train_loss=0.000454 val_loss=0.000616
+[run=3 H=40] Epoch=01 time(train+val)=185.101s
+[run=3 H=40] Epoch=01 train_loss=0.000356 val_loss=0.000625
+[run=3 H=40] Epoch=02 time(train+val)=182.017s
+[run=3 H=40] Epoch=02 train_loss=0.000336 val_loss=0.000617
+[run=3 H=40] Epoch=03 time(train+val)=184.527s
+[run=3 H=40] Epoch=03 train_loss=0.000317 val_loss=0.000603
+[run=3 H=40] Epoch=04 time(train+val)=185.940s
+[run=3 H=40] Epoch=04 train_loss=0.000295 val_loss=0.000606
+[run=3 H=40] Epoch=05 time(train+val)=185.162s
+[run=3 H=40] Epoch=05 train_loss=0.000273 val_loss=0.000628
+[run=3 H=40] Epoch=06 time(train+val)=186.136s
+[run=3 H=40] Epoch=06 train_loss=0.000251 val_loss=0.000643
+[run=3 H=40] Epoch=07 time(train+val)=186.258s
+[run=3 H=40] Epoch=07 train_loss=0.000235 val_loss=0.000650
+[run=3 H=40] Epoch=08 time(train+val)=189.760s
+[run=3 H=40] Epoch=08 train_loss=0.000218 val_loss=0.000656
+
+--- TRAINING TIME SUMMARY ---
+epochs_ran=9
+avg_epoch_time(train+val)=185.6146s
+best_epoch=3
+e2e_time_until_best=737.2743s
+total_fit_time_until_stop=1681.9725s
+best_ckpt=/home/unt.ad.unt.edu/srr0248/Desktop/pytorch_for/pytorch-forecasting/examples/ckpts_original_multirun_metrics_lon/run_3/horizon_40/best-epoch=03-val_loss=0.0006.ckpt
+
+Evaluating | run=3 horizon=40
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'loss' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['loss'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'logging_metrics' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['logging_metrics'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'test_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+trainer.test: [{'test_loss': 0.0008373428718186915, 'test_SMAPE': 0.08076176792383194, 'test_MAE': 0.001030002604238689, 'test_RMSE': 0.0022008479572832584, 'test_MAPE': 0.07143658399581909}]
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'predict_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+
+--- INFERENCE + METRICS ---
+inference_time_total=27.6776s | per_batch=0.044569s
+MSE=0.000033, RMSE=0.005726, MAE=0.001030, MAPE=7.143731%, SMAPE=8.076174%
+
+END | run=3 horizon=40
+
+========================================================================================================================
+RUN=4 | HORIZON=25 | ts=2026-01-20 17:19:50
+========================================================================================================================
+Training | run=4 horizon=25
+Checkpoint dir: ckpts_original_multirun_metrics_lon/run_4/horizon_25
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'loss' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['loss'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'val_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+[run=4 H=25] Epoch=00 time(train+val)=180.274s
+[run=4 H=25] Epoch=00 train_loss=0.000439 val_loss=0.000614
+[run=4 H=25] Epoch=01 time(train+val)=178.984s
+[run=4 H=25] Epoch=01 train_loss=0.000355 val_loss=0.000620
+[run=4 H=25] Epoch=02 time(train+val)=180.122s
+[run=4 H=25] Epoch=02 train_loss=0.000339 val_loss=0.000579
+[run=4 H=25] Epoch=03 time(train+val)=181.985s
+[run=4 H=25] Epoch=03 train_loss=0.000325 val_loss=0.000573
+[run=4 H=25] Epoch=04 time(train+val)=182.511s
+[run=4 H=25] Epoch=04 train_loss=0.000309 val_loss=0.000625
+[run=4 H=25] Epoch=05 time(train+val)=181.811s
+[run=4 H=25] Epoch=05 train_loss=0.000297 val_loss=0.000599
+[run=4 H=25] Epoch=06 time(train+val)=179.986s
+[run=4 H=25] Epoch=06 train_loss=0.000280 val_loss=0.000595
+[run=4 H=25] Epoch=07 time(train+val)=180.764s
+[run=4 H=25] Epoch=07 train_loss=0.000264 val_loss=0.000604
+[run=4 H=25] Epoch=08 time(train+val)=182.475s
+[run=4 H=25] Epoch=08 train_loss=0.000249 val_loss=0.000618
+
+--- TRAINING TIME SUMMARY ---
+epochs_ran=9
+avg_epoch_time(train+val)=180.9902s
+best_epoch=3
+e2e_time_until_best=721.3650s
+total_fit_time_until_stop=1639.7760s
+best_ckpt=/home/unt.ad.unt.edu/srr0248/Desktop/pytorch_for/pytorch-forecasting/examples/ckpts_original_multirun_metrics_lon/run_4/horizon_25/best-epoch=03-val_loss=0.0006.ckpt
+
+Evaluating | run=4 horizon=25
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'loss' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['loss'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'logging_metrics' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['logging_metrics'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'test_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+trainer.test: [{'test_loss': 0.0007723030867055058, 'test_SMAPE': 0.07104693353176117, 'test_MAE': 0.0009782332926988602, 'test_RMSE': 0.0020750213880091906, 'test_MAPE': 0.07241526246070862}]
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'predict_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+
+--- INFERENCE + METRICS ---
+inference_time_total=25.7872s | per_batch=0.041525s
+MSE=0.000031, RMSE=0.005558, MAE=0.000978, MAPE=7.241637%, SMAPE=7.104693%
+
+END | run=4 horizon=25
+
+========================================================================================================================
+RUN=4 | HORIZON=30 | ts=2026-01-20 17:48:20
+========================================================================================================================
+Training | run=4 horizon=30
+Checkpoint dir: ckpts_original_multirun_metrics_lon/run_4/horizon_30
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'loss' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['loss'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'val_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+[run=4 H=30] Epoch=00 time(train+val)=182.389s
+[run=4 H=30] Epoch=00 train_loss=0.000454 val_loss=0.000651
+[run=4 H=30] Epoch=01 time(train+val)=184.283s
+[run=4 H=30] Epoch=01 train_loss=0.000359 val_loss=0.000629
+[run=4 H=30] Epoch=02 time(train+val)=184.606s
+[run=4 H=30] Epoch=02 train_loss=0.000342 val_loss=0.000618
+[run=4 H=30] Epoch=03 time(train+val)=183.018s
+[run=4 H=30] Epoch=03 train_loss=0.000324 val_loss=0.000601
+[run=4 H=30] Epoch=04 time(train+val)=184.880s
+[run=4 H=30] Epoch=04 train_loss=0.000304 val_loss=0.000597
+[run=4 H=30] Epoch=05 time(train+val)=182.027s
+[run=4 H=30] Epoch=05 train_loss=0.000285 val_loss=0.000619
+[run=4 H=30] Epoch=06 time(train+val)=182.049s
+[run=4 H=30] Epoch=06 train_loss=0.000262 val_loss=0.000639
+[run=4 H=30] Epoch=07 time(train+val)=181.820s
+[run=4 H=30] Epoch=07 train_loss=0.000249 val_loss=0.000666
+[run=4 H=30] Epoch=08 time(train+val)=184.326s
+[run=4 H=30] Epoch=08 train_loss=0.000229 val_loss=0.000648
+[run=4 H=30] Epoch=09 time(train+val)=184.903s
+[run=4 H=30] Epoch=09 train_loss=0.000220 val_loss=0.000669
+
+--- TRAINING TIME SUMMARY ---
+epochs_ran=10
+avg_epoch_time(train+val)=183.4302s
+best_epoch=4
+e2e_time_until_best=919.1763s
+total_fit_time_until_stop=1846.9376s
+best_ckpt=/home/unt.ad.unt.edu/srr0248/Desktop/pytorch_for/pytorch-forecasting/examples/ckpts_original_multirun_metrics_lon/run_4/horizon_30/best-epoch=04-val_loss=0.0006.ckpt
+
+Evaluating | run=4 horizon=30
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'loss' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['loss'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'logging_metrics' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['logging_metrics'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'test_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+trainer.test: [{'test_loss': 0.0008689668611623347, 'test_SMAPE': 0.07368125766515732, 'test_MAE': 0.0010560646187514067, 'test_RMSE': 0.0021933680400252342, 'test_MAPE': 0.069118931889534}]
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'predict_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+
+--- INFERENCE + METRICS ---
+inference_time_total=27.0222s | per_batch=0.043514s
+MSE=0.000034, RMSE=0.005858, MAE=0.001056, MAPE=6.911949%, SMAPE=7.368123%
+
+END | run=4 horizon=30
+
+========================================================================================================================
+RUN=4 | HORIZON=35 | ts=2026-01-20 18:20:19
+========================================================================================================================
+Training | run=4 horizon=35
+Checkpoint dir: ckpts_original_multirun_metrics_lon/run_4/horizon_35
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'loss' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['loss'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'val_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+[run=4 H=35] Epoch=00 time(train+val)=186.517s
+[run=4 H=35] Epoch=00 train_loss=0.000451 val_loss=0.000636
+[run=4 H=35] Epoch=01 time(train+val)=183.684s
+[run=4 H=35] Epoch=01 train_loss=0.000355 val_loss=0.000625
+[run=4 H=35] Epoch=02 time(train+val)=183.129s
+[run=4 H=35] Epoch=02 train_loss=0.000342 val_loss=0.000621
+[run=4 H=35] Epoch=03 time(train+val)=183.583s
+[run=4 H=35] Epoch=03 train_loss=0.000321 val_loss=0.000603
+[run=4 H=35] Epoch=04 time(train+val)=183.438s
+[run=4 H=35] Epoch=04 train_loss=0.000299 val_loss=0.000623
+[run=4 H=35] Epoch=05 time(train+val)=182.424s
+[run=4 H=35] Epoch=05 train_loss=0.000280 val_loss=0.000654
+[run=4 H=35] Epoch=06 time(train+val)=182.866s
+[run=4 H=35] Epoch=06 train_loss=0.000261 val_loss=0.000649
+[run=4 H=35] Epoch=07 time(train+val)=182.176s
+[run=4 H=35] Epoch=07 train_loss=0.000247 val_loss=0.000673
+[run=4 H=35] Epoch=08 time(train+val)=183.359s
+[run=4 H=35] Epoch=08 train_loss=0.000233 val_loss=0.000679
+
+--- TRAINING TIME SUMMARY ---
+epochs_ran=9
+avg_epoch_time(train+val)=183.4640s
+best_epoch=3
+e2e_time_until_best=736.9125s
+total_fit_time_until_stop=1662.5808s
+best_ckpt=/home/unt.ad.unt.edu/srr0248/Desktop/pytorch_for/pytorch-forecasting/examples/ckpts_original_multirun_metrics_lon/run_4/horizon_35/best-epoch=03-val_loss=0.0006.ckpt
+
+Evaluating | run=4 horizon=35
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'loss' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['loss'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'logging_metrics' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['logging_metrics'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'test_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+trainer.test: [{'test_loss': 0.0007630925974808633, 'test_SMAPE': 0.06784002482891083, 'test_MAE': 0.0009891734225675464, 'test_RMSE': 0.0021424873266369104, 'test_MAPE': 0.06612218171358109}]
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'predict_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+
+--- INFERENCE + METRICS ---
+inference_time_total=27.7141s | per_batch=0.044628s
+MSE=0.000031, RMSE=0.005540, MAE=0.000989, MAPE=6.612264%, SMAPE=6.783999%
+
+END | run=4 horizon=35
+
+========================================================================================================================
+RUN=4 | HORIZON=40 | ts=2026-01-20 18:49:16
+========================================================================================================================
+Training | run=4 horizon=40
+Checkpoint dir: ckpts_original_multirun_metrics_lon/run_4/horizon_40
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'loss' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['loss'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'val_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+[run=4 H=40] Epoch=00 time(train+val)=184.672s
+[run=4 H=40] Epoch=00 train_loss=0.000452 val_loss=0.000639
+[run=4 H=40] Epoch=01 time(train+val)=184.602s
+[run=4 H=40] Epoch=01 train_loss=0.000356 val_loss=0.000636
+[run=4 H=40] Epoch=02 time(train+val)=184.233s
+[run=4 H=40] Epoch=02 train_loss=0.000336 val_loss=0.000632
+[run=4 H=40] Epoch=03 time(train+val)=185.771s
+[run=4 H=40] Epoch=03 train_loss=0.000315 val_loss=0.000627
+[run=4 H=40] Epoch=04 time(train+val)=184.486s
+[run=4 H=40] Epoch=04 train_loss=0.000294 val_loss=0.000631
+[run=4 H=40] Epoch=05 time(train+val)=184.285s
+[run=4 H=40] Epoch=05 train_loss=0.000269 val_loss=0.000654
+[run=4 H=40] Epoch=06 time(train+val)=183.423s
+[run=4 H=40] Epoch=06 train_loss=0.000244 val_loss=0.000656
+[run=4 H=40] Epoch=07 time(train+val)=183.427s
+[run=4 H=40] Epoch=07 train_loss=0.000231 val_loss=0.000664
+[run=4 H=40] Epoch=08 time(train+val)=183.531s
+[run=4 H=40] Epoch=08 train_loss=0.000215 val_loss=0.000667
+
+--- TRAINING TIME SUMMARY ---
+epochs_ran=9
+avg_epoch_time(train+val)=184.2700s
+best_epoch=3
+e2e_time_until_best=739.2783s
+total_fit_time_until_stop=1669.5049s
+best_ckpt=/home/unt.ad.unt.edu/srr0248/Desktop/pytorch_for/pytorch-forecasting/examples/ckpts_original_multirun_metrics_lon/run_4/horizon_40/best-epoch=03-val_loss=0.0006.ckpt
+
+Evaluating | run=4 horizon=40
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'loss' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['loss'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/utilities/parsing.py:209: Attribute 'logging_metrics' is an instance of `nn.Module` and is already saved during checkpointing. It is recommended to ignore them using `self.save_hyperparameters(ignore=['logging_metrics'])`.
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'test_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+trainer.test: [{'test_loss': 0.0008721574558876455, 'test_SMAPE': 0.07394326478242874, 'test_MAE': 0.0010659471154212952, 'test_RMSE': 0.002274084137752652, 'test_MAPE': 0.06783504039049149}]
+/home/unt.ad.unt.edu/srr0248/.conda/envs/pytorch-forecasting-dev/lib/python3.11/site-packages/lightning/pytorch/trainer/connectors/data_connector.py:425: The 'predict_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=103` in the `DataLoader` to improve performance.
+
+--- INFERENCE + METRICS ---
+inference_time_total=27.5729s | per_batch=0.044401s
+MSE=0.000034, RMSE=0.005857, MAE=0.001066, MAPE=6.783550%, SMAPE=7.394326%
+
+END | run=4 horizon=40
+
+########################################################################################################################
+FINAL SUMMARY (per run)
+########################################################################################################################
+ run  horizon  avg_epoch_time_s  e2e_until_best_s  total_fit_time_s  best_epoch                                                                                                                                                             best_ckpt  inference_time_s      mse     rmse      mae     mape    smape
+   1       25        184.994936        920.065698       1864.432948           4 /home/unt.ad.unt.edu/srr0248/Desktop/pytorch_for/pytorch-forecasting/examples/ckpts_original_multirun_metrics_lon/run_1/horizon_25/best-epoch=04-val_loss=0.0006.ckpt         26.333923 0.000031 0.005525 0.000977 0.076508 7.351447
+   2       25        183.908599        731.700201       1665.867465           3 /home/unt.ad.unt.edu/srr0248/Desktop/pytorch_for/pytorch-forecasting/examples/ckpts_original_multirun_metrics_lon/run_2/horizon_25/best-epoch=03-val_loss=0.0006.ckpt         26.897348 0.000033 0.005780 0.001021 0.070666 7.893095
+   3       25        183.980770        742.111171       1666.409586           3 /home/unt.ad.unt.edu/srr0248/Desktop/pytorch_for/pytorch-forecasting/examples/ckpts_original_multirun_metrics_lon/run_3/horizon_25/best-epoch=03-val_loss=0.0006.ckpt         26.751382 0.000031 0.005533 0.000970 0.063237 6.619328
+   4       25        180.990180        721.365042       1639.775973           3 /home/unt.ad.unt.edu/srr0248/Desktop/pytorch_for/pytorch-forecasting/examples/ckpts_original_multirun_metrics_lon/run_4/horizon_25/best-epoch=03-val_loss=0.0006.ckpt         25.787188 0.000031 0.005558 0.000978 0.072416 7.104693
+   1       30        186.039042        930.904800       1872.723830           4 /home/unt.ad.unt.edu/srr0248/Desktop/pytorch_for/pytorch-forecasting/examples/ckpts_original_multirun_metrics_lon/run_1/horizon_30/best-epoch=04-val_loss=0.0006.ckpt         27.380618 0.000031 0.005595 0.001006 0.068324 7.059875
+   2       30        184.857141        932.247709       1860.958699           4 /home/unt.ad.unt.edu/srr0248/Desktop/pytorch_for/pytorch-forecasting/examples/ckpts_original_multirun_metrics_lon/run_2/horizon_30/best-epoch=04-val_loss=0.0006.ckpt         27.152431 0.000031 0.005588 0.000998 0.073660 7.270861
+   3       30        182.344477        913.067272       1835.700409           4 /home/unt.ad.unt.edu/srr0248/Desktop/pytorch_for/pytorch-forecasting/examples/ckpts_original_multirun_metrics_lon/run_3/horizon_30/best-epoch=04-val_loss=0.0006.ckpt         26.743724 0.000032 0.005657 0.001006 0.067693 7.289367
+   4       30        183.430199        919.176316       1846.937645           4 /home/unt.ad.unt.edu/srr0248/Desktop/pytorch_for/pytorch-forecasting/examples/ckpts_original_multirun_metrics_lon/run_4/horizon_30/best-epoch=04-val_loss=0.0006.ckpt         27.022161 0.000034 0.005858 0.001056 0.069119 7.368123
+   1       35        188.017748       1131.821453       2081.996774           5 /home/unt.ad.unt.edu/srr0248/Desktop/pytorch_for/pytorch-forecasting/examples/ckpts_original_multirun_metrics_lon/run_1/horizon_35/best-epoch=05-val_loss=0.0006.ckpt         27.939857 0.000033 0.005730 0.001030 0.066548 6.973534
+   2       35        190.143628       1133.144398       2105.575322           5 /home/unt.ad.unt.edu/srr0248/Desktop/pytorch_for/pytorch-forecasting/examples/ckpts_original_multirun_metrics_lon/run_2/horizon_35/best-epoch=05-val_loss=0.0006.ckpt         28.693413 0.000032 0.005679 0.001024 0.074108 8.423304
+   3       35        184.496131        371.533774       1300.684968           1 /home/unt.ad.unt.edu/srr0248/Desktop/pytorch_for/pytorch-forecasting/examples/ckpts_original_multirun_metrics_lon/run_3/horizon_35/best-epoch=01-val_loss=0.0006.ckpt         27.173274 0.000034 0.005865 0.001072 0.084398 9.778879
+   4       35        183.463985        736.912481       1662.580771           3 /home/unt.ad.unt.edu/srr0248/Desktop/pytorch_for/pytorch-forecasting/examples/ckpts_original_multirun_metrics_lon/run_4/horizon_35/best-epoch=03-val_loss=0.0006.ckpt         27.714099 0.000031 0.005540 0.000989 0.066123 6.783999
+   1       40        186.717429        749.809865       1690.942310           3 /home/unt.ad.unt.edu/srr0248/Desktop/pytorch_for/pytorch-forecasting/examples/ckpts_original_multirun_metrics_lon/run_1/horizon_40/best-epoch=03-val_loss=0.0006.ckpt         28.180128 0.000031 0.005582 0.000995 0.074305 8.411270
+   2       40        191.853633        380.566263       1351.060493           1 /home/unt.ad.unt.edu/srr0248/Desktop/pytorch_for/pytorch-forecasting/examples/ckpts_original_multirun_metrics_lon/run_2/horizon_40/best-epoch=01-val_loss=0.0006.ckpt         28.071362 0.000034 0.005869 0.001045 0.067862 7.264207
+   3       40        185.614583        737.274303       1681.972527           3 /home/unt.ad.unt.edu/srr0248/Desktop/pytorch_for/pytorch-forecasting/examples/ckpts_original_multirun_metrics_lon/run_3/horizon_40/best-epoch=03-val_loss=0.0006.ckpt         27.677595 0.000033 0.005726 0.001030 0.071437 8.076174
+   4       40        184.270030        739.278257       1669.504890           3 /home/unt.ad.unt.edu/srr0248/Desktop/pytorch_for/pytorch-forecasting/examples/ckpts_original_multirun_metrics_lon/run_4/horizon_40/best-epoch=03-val_loss=0.0006.ckpt         27.572898 0.000034 0.005857 0.001066 0.067836 7.394326
+
+########################################################################################################################
+FINAL SUMMARY (mean/std by horizon across runs)
+########################################################################################################################
+ horizon  avg_epoch_time_s_mean  avg_epoch_time_s_std  e2e_until_best_s_mean  e2e_until_best_s_std  inference_time_s_mean  inference_time_s_std  mse_mean  mse_std  smape_mean  smape_std
+      25             183.468621              1.725127             778.810528             94.550220              26.442460              0.497834  0.000031 0.000001    7.242141   0.529930
+      30             184.167715              1.617127             923.849024              9.280845              27.074733              0.265790  0.000032 0.000001    7.247057   0.131720
+      35             186.530373              3.098859             843.353027            365.666546              27.880161              0.630399  0.000033 0.000002    7.989929   1.399462
+      40             187.113919              3.314504             651.732172            180.860865              27.875496              0.295463  0.000033 0.000002    7.786494   0.547978

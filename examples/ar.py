@@ -3,7 +3,7 @@ import warnings
 import lightning.pytorch as pl
 from lightning.pytorch.callbacks import EarlyStopping, LearningRateMonitor
 import pandas as pd
-from pandas.core.common import SettingWithCopyWarning
+from pandas.errors import SettingWithCopyWarning
 import torch
 
 from pytorch_forecasting import GroupNormalizer, TimeSeriesDataSet
@@ -114,11 +114,14 @@ trainer.fit(
 )
 
 # calcualte mean absolute error on validation set
-actuals = torch.cat([y for x, (y, weight) in iter(val_dataloader)])
-predictions = deepar.predict(val_dataloader)
-print(f"Mean absolute error of model: {(actuals - predictions).abs().mean()}")
+predictions = deepar.predict(val_dataloader)          # ► this lives on cuda:<n>
+actuals     = torch.cat([y for x,(y,_) in iter(val_dataloader)])
+actuals     = actuals.to(predictions.device)          # ◀️ move to the same GPU
 
-# # plot actual vs. predictions
-# raw_predictions, x = deepar.predict(val_dataloader, mode="raw", return_x=True)
-# for idx in range(10):  # plot 10 examples
-#     deepar.plot_prediction(x, raw_predictions, idx=idx, add_loss_to_title=True)
+mae = (actuals - predictions).abs().mean()
+print(f"Mean absolute error of model: {mae}")
+
+# plot actual vs. predictions
+raw_predictions, x = deepar.predict(val_dataloader, mode="raw", return_x=True)
+for idx in range(10):  # plot 10 examples
+    deepar.plot_prediction(x, raw_predictions, idx=idx, add_loss_to_title=True)
