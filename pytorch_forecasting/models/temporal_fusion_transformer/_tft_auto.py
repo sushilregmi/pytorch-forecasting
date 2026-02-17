@@ -4,7 +4,7 @@ The temporal fusion transformer is a powerful predictive model for forecasting t
 
 from copy import copy
 from typing import Optional, Union
-
+import math
 import numpy as np
 import torch
 from torch import nn
@@ -38,6 +38,109 @@ from pytorch_forecasting.utils import (
     to_list,
 )
 from pytorch_forecasting.utils._dependencies import _check_matplotlib
+
+class DecompositionLayer(nn.Module):
+    """
+    Returns the trend and the seasonal parts of the time series.
+    Inspired by Autoformer.
+    """
+
+    def __init__(self, kernel_size=25):
+        super().__init__()
+        self.kernel_size = kernel_size
+        self.avg = nn.AvgPool1d(kernel_size=kernel_size, stride=1, padding=0)
+
+    def forward(self, x):
+        """Input shape: Batch x Time x EMBED_DIM"""
+        # padding on the both ends of time series
+        # to ensure output length is same as input length
+        num_of_pads = (self.kernel_size - 1) // 2
+        front = x[:, 0:1, :].repeat(1, num_of_pads, 1)
+        end = x[:, -1:, :].repeat(1, self.kernel_size - num_of_pads - 1, 1)
+        x_padded = torch.cat([front, x, end], dim=1)
+
+        x_trend = self.avg(x_padded.permute(0, 2, 1)).permute(0, 2, 1)
+        x_seasonal = x - x_trend
+        return x_seasonal, x_trend
+
+
+class AutoCorrelationLayer(nn.Module):
+    """
+    AutoCorrelation Mechanism, inspired by Autoformer.
+    This layer replaces the standard self-attention.
+    """
+
+    def __init__(self, d_model, n_head, dropout=0.1, autocorrelation_factor=3.0):
+        super().__init__()
+        self.d_model = d_model
+        self.n_head = n_head
+        self.autocorrelation_factor = autocorrelation_factor
+        self.dropout = nn.Dropout(dropout)
+
+        self.query_projection = nn.Linear(d_model, d_model)
+        self.key_projection = nn.Linear(d_model, d_model)
+        self.value_projection = nn.Linear(d_model, d_model)
+        self.out_projection = nn.Linear(d_model, d_model)
+
+    def forward(self, q, k, v, mask=None):
+        B, L_q, H, D = q.shape
+        _, L_k, _, _ = k.shape
+
+        # The canonical shape for this layer will be (Batch, Heads, Length, Dim)
+        # Transpose q, k, v to this format upfront.
+        q = q.transpose(1, 2)
+        k = k.transpose(1, 2)
+        v = v.transpose(1, 2)
+        
+        # Pad the query to match the key length
+        if L_q < L_k:
+            padding = torch.zeros(B, H, L_k - L_q, D, device=q.device)
+            q = torch.cat([q, padding], dim=2)
+
+        # --- Period-Based Dependency Discovery ---
+        q_fft = torch.fft.rfft(q, dim=-1)
+        k_fft = torch.fft.rfft(k, dim=-1)
+        res = q_fft * torch.conj(k_fft)
+        corr = torch.fft.irfft(res, dim=-1)
+
+        # --- Time Delay Aggregation ---
+        seq_len = L_k
+        top_k = int(self.autocorrelation_factor * math.log(seq_len))
+        top_k = max(0, min(top_k, seq_len)) # Clamp k to the valid range [0, L_k]
+        
+        # weights shape is (B, H, L). We find topk along the L dimension.
+        weights = torch.mean(corr, dim=-1)
+        top_k_vals, top_k_indices = torch.topk(weights, top_k, dim=-1)
+        top_k_weights = torch.softmax(top_k_vals, dim=-1)
+
+        # delays_agg will hold the aggregated values
+        delays_agg = torch.zeros_like(v).float()
+        
+        # Iterate through the top k delays
+        for i in range(top_k):
+            # Get the i-th delay for each sample and head
+            delay = top_k_indices[..., i] # Shape: (B, H)
+            # Get the weight for the i-th delay
+            weights_i = top_k_weights[..., i] # Shape: (B, H)
+
+            # Roll the values tensor by the selected delays
+            rolled_v = torch.zeros_like(v)
+            for j in range(B):
+                for h in range(H):
+                    rolled_v[j, h] = torch.roll(v[j, h], shifts=-delay[j, h].item(), dims=0)
+            
+            # Apply weights and accumulate. Shape broadcasting:
+            # (B, H, L, D) * (B, H, 1, 1) -> Valid
+            delays_agg += rolled_v * weights_i.view(B, H, 1, 1)
+
+        # Project the output back to the expected shape
+        # Transpose (B, H, L, D) -> (B, L, H, D) then reshape
+        output = self.dropout(delays_agg)
+        output = self.out_projection(output.transpose(1, 2).contiguous().view(B, L_k, -1))
+        output = output[:, -L_q:, :]
+
+        # Return correlation weights (transpose to B, L, H for interpretability)
+        return output, weights.transpose(1, 2)
 
 
 class TemporalFusionTransformer(BaseModelWithCovariates):
@@ -158,6 +261,8 @@ class TemporalFusionTransformer(BaseModelWithCovariates):
         monotone_constaints: Optional[dict[str, int]] = None,
         share_single_variable_networks: bool = False,
         causal_attention: bool = True,
+        autocorrelation_factor: float = 3.0,
+        moving_avg_kernel_size: int = 25,
         logging_metrics: nn.ModuleList = None,
         mask_bias: float = -1e9,
         **kwargs,
@@ -400,11 +505,13 @@ class TemporalFusionTransformer(BaseModelWithCovariates):
         )
 
         # attention for long-range processing
-        self.multihead_attn = InterpretableMultiHeadAttention(
+        #  attention for long-range processing is now replaced by AutoCorrelation
+        self.decomposition = DecompositionLayer(kernel_size=self.hparams.moving_avg_kernel_size)
+        self.autocorrelation = AutoCorrelationLayer(
             d_model=self.hparams.hidden_size,
             n_head=self.hparams.attention_head_size,
             dropout=self.hparams.dropout,
-            mask_bias=self.hparams.mask_bias,
+            autocorrelation_factor=self.hparams.autocorrelation_factor,
         )
         self.post_attn_gate_norm = GateAddNorm(
             self.hparams.hidden_size, dropout=self.hparams.dropout, trainable_add=False
@@ -632,12 +739,20 @@ class TemporalFusionTransformer(BaseModelWithCovariates):
             lstm_output,
             self.expand_static_context(static_context_enrichment, timesteps),
         )
+# Decompose the input into seasonal and trend components
+        seasonal_input, trend_input = self.decomposition(attn_input)
+        batch_size, sequence_length, _ = seasonal_input.shape
+        head_size = self.hparams.attention_head_size
+        head_dim = self.hparams.hidden_size // head_size
+        
+        # Reshape the seasonal input for query, key, and value
+        seasonal_input_reshaped = seasonal_input.view(batch_size, sequence_length, head_size, head_dim)
 
-        # Attention
-        attn_output, attn_output_weights = self.multihead_attn(
-            q=attn_input[:, max_encoder_length:],  # query only for predictions
-            k=attn_input,
-            v=attn_input,
+        # Autocorrelation mechanism on the seasonal component
+        attn_output, attn_output_weights = self.autocorrelation(
+            q=seasonal_input_reshaped[:, max_encoder_length:],  # query only for predictions
+            k=seasonal_input_reshaped,
+            v=seasonal_input_reshaped,
             mask=self.get_attention_mask(
                 encoder_lengths=encoder_lengths, decoder_lengths=decoder_lengths
             ),
@@ -645,15 +760,16 @@ class TemporalFusionTransformer(BaseModelWithCovariates):
 
         # skip connection over attention
         attn_output = self.post_attn_gate_norm(
-            attn_output, attn_input[:, max_encoder_length:]
+            attn_output, seasonal_input[:, max_encoder_length:]
         )
 
         output = self.pos_wise_ff(attn_output)
 
-        # skip connection over temporal fusion decoder (not LSTM decoder
-        # despite the LSTM output contains
-        # a skip from the variable selection network)
+        # skip connection over temporal fusion decoder
         output = self.pre_output_gate_norm(output, lstm_output[:, max_encoder_length:])
+
+        # Add the trend component back to the output
+        output = output + trend_input[:, max_encoder_length:]
         if self.n_targets > 1:  # if to use multi-target architecture
             output = [output_layer(output) for output_layer in self.output_layer]
         else:
@@ -661,8 +777,8 @@ class TemporalFusionTransformer(BaseModelWithCovariates):
 
         return self.to_network_output(
             prediction=self.transform_output(output, target_scale=x["target_scale"]),
-            encoder_attention=attn_output_weights[..., :max_encoder_length],
-            decoder_attention=attn_output_weights[..., max_encoder_length:],
+            encoder_attention=attn_output_weights[:, :max_encoder_length, :],
+            decoder_attention=attn_output_weights[:, max_encoder_length:, :],
             static_variables=static_variable_selection,
             encoder_variables=encoder_sparse_weights,
             decoder_variables=decoder_sparse_weights,
@@ -737,10 +853,9 @@ class TemporalFusionTransformer(BaseModelWithCovariates):
             decoder_mask = create_mask(
                 out["decoder_attention"].size(1), out["decoder_lengths"]
             )
-            decoder_attention[
-                decoder_mask[..., None, None].expand_as(decoder_attention)
-            ] = float("nan")
-
+            mask = decoder_mask.unsqueeze(-1).expand_as(decoder_attention)
+            decoder_attention[mask] = float("nan")
+            
         if isinstance(out["encoder_attention"], (list, tuple)):
             # same game for encoder attention
             # create new attention tensor into which we will scatter
@@ -758,16 +873,7 @@ class TemporalFusionTransformer(BaseModelWithCovariates):
                     idx, :, :, self.hparams.max_encoder_length - encoder_length :
                 ] = x[..., :encoder_length]
         else:
-            # roll encoder attention (so start last encoder value is on the right)
             encoder_attention = out["encoder_attention"].clone()
-            shifts = encoder_attention.size(3) - out["encoder_lengths"]
-            new_index = (
-                torch.arange(
-                    encoder_attention.size(3), device=encoder_attention.device
-                )[None, None, None].expand_as(encoder_attention)
-                - shifts[:, None, None, None]
-            ) % encoder_attention.size(3)
-            encoder_attention = torch.gather(encoder_attention, dim=3, index=new_index)
             # expand encoder_attention to full size
             if encoder_attention.size(-1) < self.hparams.max_encoder_length:
                 encoder_attention = torch.concat(
@@ -788,7 +894,7 @@ class TemporalFusionTransformer(BaseModelWithCovariates):
                 )
 
         # combine attention vector
-        attention = torch.concat([encoder_attention, decoder_attention], dim=-1)
+        attention = torch.concat([encoder_attention, decoder_attention], dim=1)
         attention[attention < 1e-5] = float("nan")
 
         # histogram of decode and encode lengths
@@ -824,16 +930,7 @@ class TemporalFusionTransformer(BaseModelWithCovariates):
         # attention is batch x time x heads x time_to_attend
         # average over heads + only keep prediction attention and
         # attention on observed timesteps
-        attention = masked_op(
-            attention[
-                :,
-                attention_prediction_horizon,
-                :,
-                : self.hparams.max_encoder_length + attention_prediction_horizon,
-            ],
-            op="mean",
-            dim=1,
-        )
+        attention = torch.mean(attention, dim=-1)
 
         if reduction != "none":  # if to average over batches
             static_variables = static_variables.sum(dim=0)

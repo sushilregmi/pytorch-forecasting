@@ -40,8 +40,8 @@ from pytorch_forecasting.utils import (
 from pytorch_forecasting.utils._dependencies import _check_matplotlib
 
 
-class TemporalFusionTransformerNoStatic(BaseModelWithCovariates):
-    """Temporal Fusion Transformer for forecasting timeseries without any static covariates.
+class TemporalFusionTransformer(BaseModelWithCovariates):
+    """Temporal Fusion Transformer for forecasting timeseries.
 
     Initialize via :py:meth:`~from_dataset` method if possible.
 
@@ -84,6 +84,8 @@ class TemporalFusionTransformerNoStatic(BaseModelWithCovariates):
     max_encoder_length : int, default=10
         length to encode,
         can be far longer than the decoder length but does not have to be
+    static_categoricals: names of static categorical variables
+    static_reals: names of static continuous variables
     time_varying_categoricals_encoder: names of categorical variables for encoder
     time_varying_categoricals_decoder: names of categorical variables for decoder
     time_varying_reals_encoder: names of continuous variables for encoder
@@ -134,6 +136,8 @@ class TemporalFusionTransformerNoStatic(BaseModelWithCovariates):
         loss: MultiHorizonMetric = None,
         attention_head_size: int = 4,
         max_encoder_length: int = 10,
+        static_categoricals: Optional[list[str]] = None,
+        static_reals: Optional[list[str]] = None,
         time_varying_categoricals_encoder: Optional[list[str]] = None,
         time_varying_categoricals_decoder: Optional[list[str]] = None,
         categorical_groups: Optional[Union[dict, list[str]]] = None,
@@ -182,6 +186,10 @@ class TemporalFusionTransformerNoStatic(BaseModelWithCovariates):
             time_varying_categoricals_decoder = []
         if time_varying_categoricals_encoder is None:
             time_varying_categoricals_encoder = []
+        if static_reals is None:
+            static_reals = []
+        if static_categoricals is None:
+            static_categoricals = []
         if logging_metrics is None:
             logging_metrics = nn.ModuleList([SMAPE(), MAE(), RMSE(), MAPE()])
         if loss is None:
@@ -216,7 +224,29 @@ class TemporalFusionTransformerNoStatic(BaseModelWithCovariates):
             }
         )
 
-        #lstm input and hidden cell initialization
+        # variable selection
+        # variable selection for static variables
+        # static_input_sizes = {
+        #     name: self.input_embeddings.output_size[name]
+        #     for name in self.hparams.static_categoricals
+        # }
+        # static_input_sizes.update(
+        #     {
+        #         name: self.hparams.hidden_continuous_sizes.get(
+        #             name, self.hparams.hidden_continuous_size
+        #         )
+        #         for name in self.hparams.static_reals
+        #     }
+        # )
+        # self.static_variable_selection = VariableSelectionNetwork(
+        #     input_sizes=static_input_sizes,
+        #     hidden_size=self.hparams.hidden_size,
+        #     input_embedding_flags={
+        #         name: True for name in self.hparams.static_categoricals
+        #     },
+        #     dropout=self.hparams.dropout,
+        #     prescalers=self.prescalers,
+        # )
         self.input_hidden_init = nn.Parameter(torch.zeros(self.hparams.lstm_layers, 1, self.hparams.hidden_size))
         self.input_cell_init = nn.Parameter(torch.zeros(self.hparams.lstm_layers, 1, self.hparams.hidden_size))
         # variable selection for encoder and decoder
@@ -297,7 +327,15 @@ class TemporalFusionTransformerNoStatic(BaseModelWithCovariates):
             ),
         )
 
-     
+        # static encoders
+        # for variable selection
+        # self.static_context_variable_selection = GatedResidualNetwork(
+        #     input_size=self.hparams.hidden_size,
+        #     hidden_size=self.hparams.hidden_size,
+        #     output_size=self.hparams.hidden_size,
+        #     dropout=self.hparams.dropout,
+        # )
+
         # for hidden state of the lstm
         self.static_context_initial_hidden_lstm = GatedResidualNetwork(
             input_size=self.hparams.hidden_size,
@@ -314,7 +352,13 @@ class TemporalFusionTransformerNoStatic(BaseModelWithCovariates):
             dropout=self.hparams.dropout,
         )
 
-       
+        # for post lstm static enrichment
+        # self.static_context_enrichment = GatedResidualNetwork(
+        #     self.hparams.hidden_size,
+        #     self.hparams.hidden_size,
+        #     self.hparams.hidden_size,
+        #     self.hparams.dropout,
+        # )
 
         # lstm encoder (history) and decoder (future) for local processing
         self.lstm_encoder = LSTM(
@@ -338,16 +382,25 @@ class TemporalFusionTransformerNoStatic(BaseModelWithCovariates):
             self.hparams.hidden_size, dropout=self.hparams.dropout
         )
         self.post_lstm_gate_decoder = self.post_lstm_gate_encoder
-        
+        # self.post_lstm_gate_decoder = GatedLinearUnit(
+        #           self.hparams.hidden_size, dropout=self.hparams.dropout)
         self.post_lstm_add_norm_encoder = AddNorm(
             self.hparams.hidden_size, trainable_add=False
         )
-       
+        # self.post_lstm_add_norm_decoder = AddNorm(
+        #                               self.hparams.hidden_size, trainable_add=True)
         self.post_lstm_add_norm_decoder = self.post_lstm_add_norm_encoder
 
-    
-        #temporal context bias 
-        self.temporal_context_embedding = nn.Parameter(torch.zeros(1, 1, self.hparams.hidden_size)) 
+        # static enrichment and processing past LSTM
+        # self.static_enrichment = GatedResidualNetwork(
+        #     input_size=self.hparams.hidden_size,
+        #     hidden_size=self.hparams.hidden_size,
+        #     output_size=self.hparams.hidden_size,
+        #     dropout=self.hparams.dropout,
+        #     context_size=self.hparams.hidden_size,
+        # )
+
+        self.temporal_context_embedding = nn.Parameter(torch.zeros(1, 1, self.hparams.hidden_size))
 
         # attention for long-range processing
         self.multihead_attn = InterpretableMultiHeadAttention(
@@ -399,7 +452,7 @@ class TemporalFusionTransformerNoStatic(BaseModelWithCovariates):
             **kwargs: additional arguments such as hyperparameters for model (see ``__init__()``)
 
         Returns:
-            TemporalFusionTransformerNoStatic
+            TemporalFusionTransformer
         """  # noqa: E501
         # add maximum encoder length
         # update defaults
@@ -493,7 +546,10 @@ class TemporalFusionTransformerNoStatic(BaseModelWithCovariates):
             }
         )
 
-    
+       
+        # static_context_variable_selection = self.expand_static_context(
+        #     self.static_context_variable_selection(static_embedding), timesteps
+        # )
 
         embeddings_varying_encoder = {
             name: input_vectors[name][:, :max_encoder_length]
@@ -517,6 +573,7 @@ class TemporalFusionTransformerNoStatic(BaseModelWithCovariates):
 
         # LSTM
         # calculate initial state
+        
         batch_size = x_cont.size(0)
         input_hidden = self.input_hidden_init.expand(-1, batch_size, -1).contiguous()
         input_cell = self.input_cell_init.expand(-1, batch_size, -1).contiguous()
@@ -549,7 +606,8 @@ class TemporalFusionTransformerNoStatic(BaseModelWithCovariates):
 
         lstm_output = torch.cat([lstm_output_encoder, lstm_output_decoder], dim=1)
 
-        # temporal context bias
+        # static enrichment
+        # static_context_enrichment = self.static_context_enrichment(static_embedding)
         temporal_context = self.temporal_context_embedding.expand(batch_size, timesteps, -1)
         attn_input = lstm_output + temporal_context
 
