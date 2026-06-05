@@ -1,5 +1,8 @@
 """Temporal fusion transformer for forecasting timeseries."""
 
+from pytorch_forecasting.models.temporal_fusion_transformer._tft import (
+    TemporalFusionTransformer as TemporalFusionTransformerVanilla,
+)
 from pytorch_forecasting.models.temporal_fusion_transformer._tft_no_static import (
     TemporalFusionTransformer,
 )
@@ -17,6 +20,7 @@ from pytorch_forecasting.models.temporal_fusion_transformer.sub_modules import (
 
 __all__ = [
     "TemporalFusionTransformer",
+    "TemporalFusionTransformerVanilla",
     "AddNorm",
     "GateAddNorm",
     "GatedLinearUnit",
