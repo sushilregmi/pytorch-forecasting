@@ -224,7 +224,7 @@ class TemporalFusionTransformerTCNNoStatic(BaseModelWithCovariates):
     log_gradient_flow: if to log gradient flow, this takes time and should be only done to diagnose training
         failures
     reduce_on_plateau_patience (int): patience after which learning rate is reduced by a factor of 10
-    monotone_constaints (Dict[str, int]): dictionary of monotonicity constraints for continuous decoder
+    monotone_constraints (Dict[str, int]): dictionary of monotonicity constraints for continuous decoder
         variables mapping
         position (e.g. ``"0"`` for first position) to constraint (``-1`` for negative and ``+1`` for positive,
         larger numbers add more weight to the constraint vs. the loss but are usually not necessary).
@@ -270,15 +270,15 @@ class TemporalFusionTransformerTCNNoStatic(BaseModelWithCovariates):
         log_val_interval: Union[int, float] = None,
         log_gradient_flow: bool = False,
         reduce_on_plateau_patience: int = 1000,
-        monotone_constaints: Optional[dict[str, int]] = None,
+        monotone_constraints: Optional[dict[str, int]] = None,
         share_single_variable_networks: bool = False,
         causal_attention: bool = True,
         logging_metrics: nn.ModuleList = None,
         mask_bias: float = -1e9,
         **kwargs,
     ):
-        if monotone_constaints is None:
-            monotone_constaints = {}
+        if monotone_constraints is None:
+            monotone_constraints = {}
         if embedding_labels is None:
             embedding_labels = {}
         if embedding_paddings is None:
