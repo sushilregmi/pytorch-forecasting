@@ -147,3 +147,6 @@ lightning_logs
 
 # data
 pytorch_forecasting/data/*.parquet
+
+#my code
+

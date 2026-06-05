@@ -17,8 +17,7 @@ from pytorch_forecasting.models.nn import GRU, LSTM, MultiEmbedding, get_rnn
 from pytorch_forecasting.models.rnn import RecurrentNetwork
 from pytorch_forecasting.models.temporal_fusion_transformer import (
     TemporalFusionTransformer,
-    TemporalFusionTransformerNoStatic,
-    TemporalFusionTransformerTCNNoStatic,
+    
     
 )
 from pytorch_forecasting.models.tide import TiDEModel
